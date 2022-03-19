@@ -1,20 +1,35 @@
 <?php
 
-    // functions
-function sayHello($name = 'shaun', $time = 'morning') {
-    echo "good $time $name";
+    // local var 
+function myFunc() {
+    $price = 10;
+    echo $price;
 }
 
-// sayHello('mario');
-sayHello('yoshi', 'night');
+// myFunc();
+// echo $price; // Error
 
-function formatProduct($product) {
-    // echo "{$product['name']} costs " . '$' . "{$product['price']} to buy <br />";
-    return "{$product['name']} costs " . '$' . "{$product['price']} to buy <br />";
+    // global var 
+
+$name = 'mario';
+// function sayHello() {
+//     global $name;
+//     $name = 'yoshi';
+//     echo "hello $name";
+// }
+// sayHello();
+// echo $name; //changed too 
+
+function sayBye(&$name) { // add & references the one in global
+    $name = 'wario';
+    echo "bye $name";
 }
+sayBye($name);
+echo $name;  // not changed since the function was not reffering to the name
 
-// $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
-// echo $formatted;
+
+
+
 
 ?>
 
