@@ -1,15 +1,35 @@
 <?php
 
-define('COUNTRY', 'Rwanda');
+$stringOne = 'Jessie';
+$stringTwo = 'Umuhire';
 
-$name = 'Jessie';
-$age = 20;
+    // concatunation 
+echo $stringOne . $stringTwo;
 
-// Overiding the variable name
-$name = "Umuhire"
+$name = 'Mario';
+echo 'Hey, my name is ' . $name;
 
-// Error
-define('COUNTRY', 'USA');
+    // double quotes
+echo "Hey, my name is $name"
+
+    // Escaping the string
+echo "I screamed \"Uhuuu\"";
+echo 'I screamed "Uhuuu"';
+
+    // Indexing
+echo $name[0];
+
+    // length of the string
+echo strlen($stringTwo);
+
+    // uppercase
+echo strtoupper($name);
+
+    // lower
+echo strtolower($name);
+
+    // Replace
+echo str_replace('M', 'W', $name);
 
 ?>
 
@@ -19,10 +39,6 @@ define('COUNTRY', 'USA');
     <title>PHP Learn</title>
 </head>
 <body>
-    <h1><?php echo 'Hello, Jessie'; ?></h1>
-
-    <div><?php echo COUNTRY; ?></div>
-    <div><?php echo $name ?></div>
-    <div><?php echo $age ?></div>
+    
 </body>
 </html>
