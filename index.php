@@ -1,28 +1,40 @@
 <?php
 
-$radius = 25;
-$pi = 3.14;
+    // indexed arrays
+$arrNames = ['umuhire', 'umutesi', 'jessie'];
+// echo $arrNames[1];
 
-    // are of circle
-echo $pi * $radius**2;
+$arrList = array('Yo', 'Yu', 'Ye');
+echo $arrList[1];
+print_r ($arrList); // see an array in a readable format
 
-    // Order of operstion (BIMAS)
-echo 3 * (5 + (4 *4) - 2) **2
+    // Overide
+$arrList[0] = 'Yam';
+print_r ($arrList);
 
-    // increment and decrement
-echo $radius --;
-echo $radius;
+    // add a value in array
+$arrList[] = 'Yal';
+print_r ($arrList);
 
-    // shorthand operators
-$age = 40;
-$age *= 20;
-echo $age
+array_push($arrList, 'Yum');
+print_r ($arrList);
 
-    // number function
-echo floor($pi);
-echo ceil($pi);
-echo pi();
+    // length of aray
+echo count($arrList);
 
+$otherArr = array_merge($arrNames, $arrList);
+print_r ($otherArr);
+
+    // Associative arays(key & valu pairs)
+$fruits = ['apple' => 'green', 'banana' => 'yellow', 'pineapple' => 'orange'];
+echo $fruits['banana'];
+print_r($fruits);
+
+$fruitOther = array('strawberry' => 'red', 'blueberry' => 'blue');
+print_r($fruitOther);
+
+$fruitOther['can'] = 'white';
+print_r($fruitOther);
 
 ?>
 
