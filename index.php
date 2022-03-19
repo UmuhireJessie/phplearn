@@ -36,6 +36,19 @@ print_r($fruitOther);
 $fruitOther['can'] = 'white';
 print_r($fruitOther);
 
+// multi-dimensional array
+$blogs = [
+    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 23],
+    ['title' => 'mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 30],
+    ['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+];
+
+echo $blogs[2]['author'];
+
+// take out the last element if the array
+$popped = array_pop($blogs);
+print_r($popped);
+
 ?>
 
 <!DOCTYPE html>
