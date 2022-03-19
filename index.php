@@ -1,35 +1,28 @@
 <?php
 
-$stringOne = 'Jessie';
-$stringTwo = 'Umuhire';
+$radius = 25;
+$pi = 3.14;
 
-    // concatunation 
-echo $stringOne . $stringTwo;
+    // are of circle
+echo $pi * $radius**2;
 
-$name = 'Mario';
-echo 'Hey, my name is ' . $name;
+    // Order of operstion (BIMAS)
+echo 3 * (5 + (4 *4) - 2) **2
 
-    // double quotes
-echo "Hey, my name is $name"
+    // increment and decrement
+echo $radius --;
+echo $radius;
 
-    // Escaping the string
-echo "I screamed \"Uhuuu\"";
-echo 'I screamed "Uhuuu"';
+    // shorthand operators
+$age = 40;
+$age *= 20;
+echo $age
 
-    // Indexing
-echo $name[0];
+    // number function
+echo floor($pi);
+echo ceil($pi);
+echo pi();
 
-    // length of the string
-echo strlen($stringTwo);
-
-    // uppercase
-echo strtoupper($name);
-
-    // lower
-echo strtolower($name);
-
-    // Replace
-echo str_replace('M', 'W', $name);
 
 ?>
 
