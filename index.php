@@ -36,7 +36,7 @@
 <div class="container">
     <div class="row">
 
-        <?php foreach ($pizzas as $pizza) { ?>
+        <?php foreach ($pizzas as $pizza): ?>
             
             <div class="col s6 md3 ">
                 <div class="card z-depth-0">
@@ -44,9 +44,9 @@
                         <h6><?php echo htmlspecialchars($pizza['title']); ?></h6>
                         <div>
                             <ul>
-                                <?php foreach (explode(',', $pizza['ingredients']) as $ing) { ?>
+                                <?php foreach (explode(',', $pizza['ingredients']) as $ing): ?>
                                     <li><?php echo htmlspecialchars($ing) ?></li>
-                                <?php } ?>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
@@ -56,7 +56,15 @@
                 </div>
             </div>
 
-        <?php } ?>
+        <?php endforeach; ?>
+
+        <?php if(count($pizzas) >= 4): ?>
+            <p>there are 2 or more pizzas</p>
+        
+
+        <?php  else :?>
+            <p>there are less than 4 pizzas</p>
+        <?php endif; ?>
 
     </div>
 </div>
