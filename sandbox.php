@@ -1,39 +1,34 @@
 <?php
 
-    // $_SESSION
-    if (isset($_POST['submit'])) {
+    // file system
+    
+    // $quotes = readfile('readme.txt');
+    // echo $quotes;
 
-        // cookie for gender
-        setcookie('gender', $_POST['gender'], time() + 86400);
+    $file = 'readme.txt';
+    if (file_exists($file)) {
 
-        session_start();
+        // //read file
+        // echo readfile($file) . '<br>';
 
-        $_SESSION['name'] = $_POST['name'];
+        // // copy file
+        // copy($file, 'quotes.txt');
 
-        echo $_SESSION['name'];
+        // // absolute path
+        // echo realpath($file) . '<br>';
 
-        header('Location: index.php');
+        // // file size
+        // echo filesize($file) . '<br>';
+
+        // // rename a file
+        // rename($file, 'text.txt');
+    } else {
+        echo 'file does not exists';
     }
+
+    // make a directory
+    mkdir('quotes');
 
     
 
 ?>
-
-<!DOCTYPE html>
-<html">
-<head>
-    <title>Document</title>
-</head>
-<body>
-
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-        <input type="" name="name">
-        <select name="gender">
-            <option value="male">male</option>
-            <option value="female">female</option>
-        </select>
-        <input type="submit" name="submit" value="submit">
-    </form>
-    
-</body>
-</html>
