@@ -1,12 +1,6 @@
 <?php
 
-    // connect to databse 
-    $conn = mysqli_connect('localhost', 'root', 'jessie@17', 'ninja_pizza');
-
-    // check the connection
-    if (!$conn) {
-        echo 'Connection error: ' . mysqli_connect_error();
-    }
+    include ('config/db_connect.php');
 
     // write query from all pizzas
     $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY created_at';
